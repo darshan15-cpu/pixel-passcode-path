@@ -122,24 +122,28 @@ function Index() {
 
                 <div className="grid grid-cols-2 gap-2.5">
                   <KeypadButton
+                    dataKey="1"
                     label="1"
                     onClick={() => press("1")}
                     pressed={pressed === "1"}
                     variant="digit"
                   />
                   <KeypadButton
+                    dataKey="0"
                     label="0"
                     onClick={() => press("0")}
                     pressed={pressed === "0"}
                     variant="digit"
                   />
                   <KeypadButton
+                    dataKey="backspace"
                     label="←"
                     onClick={() => press("backspace")}
                     pressed={pressed === "backspace"}
                     variant="utility"
                   />
                   <KeypadButton
+                    dataKey="enter"
                     label="ENTER"
                     onClick={() => press("enter")}
                     pressed={pressed === "enter"}
