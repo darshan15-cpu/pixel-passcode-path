@@ -205,11 +205,13 @@ function Index() {
 }
 
 function KeypadButton({
+  dataKey,
   label,
   onClick,
   pressed,
   variant,
 }: {
+  dataKey: string;
   label: string;
   onClick: () => void;
   pressed: boolean;
@@ -223,6 +225,7 @@ function KeypadButton({
 
   return (
     <button
+      data-key={dataKey}
       onClick={onClick}
       className={[
         "flex h-12 w-16 items-center justify-center rounded-lg text-sm font-semibold shadow-md transition-transform duration-100 md:h-14 md:w-20",
