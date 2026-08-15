@@ -99,17 +99,17 @@ function Index() {
               <div className="absolute left-6 bottom-16 right-6 h-24 rounded-md border border-amber-950/50 bg-amber-800/30 md:h-28" />
 
               {/* Sticker with 104 hint */}
-              <div className="absolute top-32 left-8 rotate-[-8deg] drop-shadow-lg">
+              <div className="absolute top-28 left-4 z-10 flex flex-col items-center gap-1.5 rotate-[-6deg] md:top-32 md:left-5">
                 <img
                   src={sticker}
                   alt="Yellow sticker reading 104"
                   width={90}
                   height={60}
-                  className="h-auto w-20 rounded-sm md:w-24"
+                  className="h-auto w-20 drop-shadow-lg md:w-24"
                 />
-                <div className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-amber-200/80">
-                  DECIMAL HINT
-                </div>
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-200/90">
+                  Decimal Hint
+                </span>
               </div>
 
               {/* Digital lock device */}
