@@ -90,7 +90,8 @@ function Index() {
             <div
               className="absolute inset-0 origin-left transition-transform duration-1000 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
               style={{
-                transform: status === "unlocked" ? "perspective(900px) rotateY(-105deg)" : "rotateY(0deg)",
+                transform: status === "unlocked" ? "perspective(900px) rotateY(-82deg)" : "rotateY(0deg)",
+                backfaceVisibility: "hidden",
               }}
             >
               {/* Inner panels */}
@@ -165,15 +166,17 @@ function Index() {
             </div>
 
             {/* Door handle */}
-            <div className="absolute top-1/2 right-5 h-4 w-16 rounded-full bg-gradient-to-b from-amber-600 to-amber-900 shadow-lg md:right-6 md:w-20" />
-            <div className="absolute top-1/2 right-5 h-10 w-10 -translate-y-1/2 rounded-full bg-amber-700 shadow-md md:right-6" />
+            <div className="absolute top-1/2 right-5 h-4 w-16 rounded-full bg-gradient-to-b from-amber-500 to-amber-800 shadow-lg md:right-6 md:w-20" />
+            <div className="absolute top-1/2 right-5 h-10 w-10 -translate-y-1/2 rounded-full bg-amber-600 shadow-md md:right-6" />
 
-            {/* Light leaking from behind when open */}
+            {/* Room interior behind the door */}
             <div
-              className="absolute inset-0 -z-10 transition-opacity duration-700"
+              className="pointer-events-none absolute inset-[3px] -z-10 flex items-center justify-center rounded-md transition-opacity duration-700"
               style={{ opacity: status === "unlocked" ? 1 : 0 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/40 via-amber-400/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-black" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,215,120,0.25),transparent_70%)]" />
+              <div className="absolute bottom-0 h-1/3 w-full bg-gradient-to-t from-amber-100/10 to-transparent" />
             </div>
           </div>
 
