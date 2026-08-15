@@ -90,7 +90,7 @@ function Index() {
             <div
               className="absolute inset-0 origin-left transition-transform duration-1000 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
               style={{
-                transform: status === "unlocked" ? "perspective(900px) rotateY(-82deg)" : "rotateY(0deg)",
+                transform: status === "unlocked" ? "perspective(900px) rotateY(82deg)" : "rotateY(0deg)",
                 backfaceVisibility: "hidden",
               }}
             >
